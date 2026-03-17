@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar AI Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+  <h1>📊 Calendar AI Dashboard</h1>
+
+  <!-- タブ -->
+  <div class="tabs">
+    <button id="tab-events">Events</button>
+    <button id="tab-summary">Summary</button>
+  </div>
+
+  <!-- イベント表示エリア（← ここ超重要） -->
+  <div id="events-view"></div>
+
+  <!-- サマリー表示エリア -->
+  <div id="summary-view" style="display:none;"></div>
+
+  <!-- JS（CSP対応：外部のみ） -->
+  <script src="dashboard.js"></script>
+
+</body>
+</html>

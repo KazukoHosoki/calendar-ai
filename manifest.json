@@ -1,21 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "Google Calendar AI",
-  "version": "1.0.0",
-  "description": "AI Meeting Analysis for Google Calendar",
-  "permissions": ["activeTab", "storage"],
-  "action": {
-    "default_popup": "popup/popup.html",
-    "default_title": "Google Calendar AI"
-  },
+  "name": "Calendar AI",
+  "version": "3.0.0",
+
+  "permissions": ["storage"],
+  "host_permissions": ["https://calendar.google.com/*"],
+
   "background": {
     "service_worker": "background.js"
   },
+
   "content_scripts": [
     {
-      "matches": ["*://calendar.google.com/*"],
+      "matches": ["https://calendar.google.com/*"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
-  ]
+  ],
+
+  "action": {}
 }
